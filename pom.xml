@@ -19,7 +19,7 @@
     <properties>
         <slf4j-log4j12.version>1.7.9</slf4j-log4j12.version>
         <jcl-over-slf4j.version>1.7.5</jcl-over-slf4j.version>
-        <fastjson.version>1.2.8</fastjson.version>
+        <fastjson.version>[1.2.31,)</fastjson.version>
         <dtaf.version>0.2.0-SNAPSHOT</dtaf.version>
         <bolt.version>0.0.2-SNAPSHOT</bolt.version>
         <nacos.client.version>0.4.0</nacos.client.version>
