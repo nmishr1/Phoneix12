@@ -1,0 +1,46 @@
+<Project>
+    <properties>
+        <param file="import" value="target/test-classes/env/func/opensource.conf"/>
+    </properties>
+    <projectName>spring-alibaba-cloud-nacos</projectName>
+    <envMode>opensource</envMode>
+
+    <AliMachine>
+        <id>SpringCloudAlibaba</id>
+        <userId>26783</userId>
+        <IpAdress>${testAppAddr}</IpAdress>
+        <SpringCloudAlibabaApplication>
+            <id>Apps</id>
+            <!--<Script>-->
+            <!--<id>430</id>-->
+            <!--<scriptParam>${gitBranch}</scriptParam>-->
+            <!--</Script>-->
+            <params>
+                <param key="testAppAddr" value="${testAppAddr}"/>
+                <param key="gitRepo" value="${gitRepo}"/>
+                <param key="gitBranch" value="${gitBranch}"/>
+                <param key="startShell" value="${startShell}"/>
+                <param key="homePath" value="${homePath}"/>
+                <param key="shellPath" value="${shellPath}"/>
+                <param key="stopShell" value="${stopShell}" />
+                <param key="sbaApplications" value="${sbaApplications}" />
+                <param key="sbaPort" value="${sbaPort}" />
+                <param key="nacosServerIp" value="${nacosServerIp}" />
+                <param key="deploy.skip" value="${deploy.skip}" />
+                <param key="consumer.springBootOne.port" value="${consumer.springBootOne.port}" />
+                <param key="consumer.springBootTwo.port" value="${consumer.springBootTwo.port}" />
+                <param key="consumer.springBootOne.management.port" value="${consumer.springBootOne.management.port}" />
+                <param key="consumer.springBootTwo.management.port" value="${consumer.springBootTwo.management.port}" />
+                <param key="provider.springBootOne.port" value="${provider.springBootOne.port}" />
+                <param key="provider.springBootTwo.port" value="${provider.springBootTwo.port}" />
+                <param key="zuul.springBootTwo.port" value="${zuul.springBootTwo.port}" />
+                <param key="gateway.springBootTwo.port" value="${gateway.springBootTwo.port}" />
+                <param key="provider3.springBootTwo.port" value="${provider3.springBootTwo.port}" />
+                <param key="sentinel.springBootTwo.port" value="${sentinel.springBootTwo.port}" />
+                <param key="sentinel.dashboard.ip" value="${sentinel.dashboard.ip}" />
+                <param key="sentinel.dashboard.port" value="${sentinel.dashboard.port}" />
+                <param key="deploy.time" value="${deploy.time}" />
+            </params>
+        </SpringCloudAlibabaApplication>
+    </AliMachine>
+</Project>
