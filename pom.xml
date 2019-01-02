@@ -40,31 +40,9 @@
         </dependency>
         <dependency>
             <groupId>com.taobao.test</groupId>
-            <artifactId>dtafEx</artifactId>
-            <version>0.0.2-SNAPSHOT</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>com.taobao.test</groupId>
-                    <artifactId>dtaf</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>com.taobao.test</groupId>
             <artifactId>dtaf</artifactId>
             <version>${dtaf.version}</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>com.taobao.test</groupId>-->
-            <!--<artifactId>bolt</artifactId>-->
-            <!--<version>${bolt.version}</version>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>fastjson</artifactId>-->
-                    <!--<groupId>com.alibaba</groupId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>com.alibaba.nacos</groupId>
             <artifactId>nacos-client</artifactId>
