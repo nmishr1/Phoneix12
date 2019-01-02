@@ -1,12 +1,11 @@
 package com.taobao.nacos.testcase.opensource.sentinel;
 
-import com.taobao.nacos.testcase.BaseTestCase;
-import com.taobao.test.common.dtaf.junit.annotation.TestSet;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class SentinelEndPointTest extends BaseTestCase {
+public class SentinelEndPointTest {
     @Before
     public void before() {
 
@@ -17,9 +16,8 @@ public class SentinelEndPointTest extends BaseTestCase {
 
     }
 
-    @TestSet("opensource")
     @Test
     public void sentinelEndPointTest() {
-
+        Assert.assertTrue(true);
     }
 }

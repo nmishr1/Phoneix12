@@ -20,14 +20,18 @@
         <slf4j-log4j12.version>1.7.9</slf4j-log4j12.version>
         <jcl-over-slf4j.version>1.7.5</jcl-over-slf4j.version>
         <fastjson.version>[1.2.31,)</fastjson.version>
-        <dtaf.version>0.2.0-SNAPSHOT</dtaf.version>
-        <bolt.version>0.0.2-SNAPSHOT</bolt.version>
         <nacos.client.version>0.4.0</nacos.client.version>
         <sca.nacos.discovery.version>0.1.1.BUILD-SNAPSHOT</sca.nacos.discovery.version>
         <spring.cloud.alicloud.context.version>0.2.1.BUILD-SNAPSHOT</spring.cloud.alicloud.context.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.1</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
@@ -37,11 +41,6 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>${fastjson.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.taobao.test</groupId>
-            <artifactId>dtaf</artifactId>
-            <version>${dtaf.version}</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba.nacos</groupId>

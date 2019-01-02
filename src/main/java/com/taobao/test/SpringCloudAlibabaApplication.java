@@ -1,10 +1,5 @@
 package com.taobao.test;
 
-import com.thoughtworks.xstream.annotations.XStreamAlias;
-
-
-@XStreamAlias("SpringCloudAlibabaApplication")
-
 public class SpringCloudAlibabaApplication {
 
 

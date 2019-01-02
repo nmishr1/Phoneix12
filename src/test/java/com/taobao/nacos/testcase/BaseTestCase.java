@@ -1,12 +1,10 @@
 package com.taobao.nacos.testcase;
 
 import com.taobao.nacos.unit.NacosOpenApiConstants;
-import com.taobao.test.common.dtaf.element.impl.AbstractTestElement;
-import com.taobao.test.common.dtaf.junit.AbstractDtafTestCase;
 
 import java.util.Map;
 
-public class BaseTestCase extends AbstractDtafTestCase {
+public class BaseTestCase {
 
     public Map<String, String> params;
     public String nacosServerIp;
@@ -25,7 +23,6 @@ public class BaseTestCase extends AbstractDtafTestCase {
     public int sentinelDashboardPort;
 
     public BaseTestCase() {
-        params = ((AbstractTestElement) getDtafTestProject()).getVariables();
         nacosServerIp = System.getProperty("nacosServerIp", params.get("nacosServerIp")) + NacosOpenApiConstants.QUERY_INSTANCS_LIST_BY_SERVICENAME;
         testMachineIp = System.getProperty("testAppAddr", params.get("testAppAddr"));
         consumerSpringBootOnePort = Integer.valueOf(System.getProperty("consumer.springBootOne.port", params.get("consumer.springBootOne.port")));
