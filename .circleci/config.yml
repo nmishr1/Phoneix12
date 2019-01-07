@@ -6,6 +6,7 @@ jobs:
         user: appuser
     environment:
       _JAVA_OPTIONS: "-Xms1024m -Xmx2048m"
+      ci_env: `bash <(curl -s https://codecov.io/env)`
       TERM: dumb
     branches:
       ignore:
