@@ -1,0 +1,46 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: springcloud/pipeline-base
+        user: appuser
+    environment:
+      _JAVA_OPTIONS: "-Xms1024m -Xmx2048m"
+      TERM: dumb
+    branches:
+      ignore:
+        - gh-pages # list of branches to ignore
+    resource_class: large
+    steps:
+      - checkout
+      - restore_cache:
+          key: sca-test-{{ .Branch }}
+      - run:
+          name: "Download dependencies"
+          command: ./mvnw -Pspring -U --fail-never dependency:go-offline || true
+      - save_cache:
+          key: sca-test-{{ .Branch }}
+          paths:
+            - ~/.m2
+      - run:
+          name: "look and install python"
+          command: |
+            python -V
+            bash -c "yes | add-apt-repository ppa:jonathonf/python-3.6 && apt-get update && apt-get install -y python3.6"
+            python -V
+      - run:
+          name: "Running build"
+          command: ./mvnw -Pspring -Pdocs clean install -U -nsu --batch-mode -Dmaven.test.redirectTestOutputToFile=true -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+      - run:
+          name: "Aggregate test results"
+          when: always
+          command: |
+            mkdir -p ~/junit/
+            find . -type f -regex ".*/target/.*-reports/.*" -exec cp {} ~/junit/ \;
+            bash <(curl -s https://codecov.io/bash) -t 8dc515f7-a691-4e29-9b68-6199cd3ca46d
+      - store_artifacts:
+          path: ~/junit/
+          destination: artifacts
+      - store_test_results:
+          path: ~/junit/
+          destination: testartifacts
