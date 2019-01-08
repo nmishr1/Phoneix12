@@ -118,25 +118,11 @@
                     </formats>
                     <check />
                 </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-antrun-plugin</artifactId>
                 <executions>
                     <execution>
-                        <id>copy</id>
                         <phase>package</phase>
-                        <configuration>
-                            <tasks>
-                                <copy todir="${basedir}/">
-                                    <fileset dir="${project.build.directory}">
-                                        <include name="*fat-tests.jar"/>
-                                    </fileset>
-                                </copy>
-
-                            </tasks>
-                        </configuration>
                         <goals>
-                            <goal>run</goal>
+                            <goal>cobertura</goal>
                         </goals>
                     </execution>
                 </executions>
