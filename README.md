@@ -5,6 +5,9 @@ Master: [![Build Status](https://travis-ci.com/zhendong590/sca-test-demo.svg?bra
 private demo
 
 
+public static void main{
+}
+
 Test Demo
 
 Group 2 Demo on Integration part.
