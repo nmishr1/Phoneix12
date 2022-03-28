@@ -21,8 +21,6 @@ public class SentinelEndPointTest {
         Assert.assertTrue(true);
     }
 }
-{
 
-}
 
 poc will be submit today
