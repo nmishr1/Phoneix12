@@ -22,8 +22,8 @@ public class SentinelEndPointTest {
     }
 }
 {
-    a=10;
-    b=35;
+    a=25;
+    b=340;
     b=a+d
     d=c+b
     ;
