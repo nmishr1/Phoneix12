@@ -6,6 +6,9 @@ private demo
 
 
 Test Demo
+public function void main{
+a+b=c
+c+d=e
 
 Group 2 Demo on Integration part.
 my name is naman
