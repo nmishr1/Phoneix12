@@ -22,7 +22,7 @@ public class SentinelEndPointTest {
     }
 }
 {
-    a=10;
-    b=15;
+   kkfnskfnknfksnf
     c=a+b;
+
 }
