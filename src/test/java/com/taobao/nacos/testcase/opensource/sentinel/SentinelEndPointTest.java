@@ -22,9 +22,7 @@ public class SentinelEndPointTest {
     }
 }
 {
-    a=20;
-    b=25;
-    b=a+c
-    d=c+b
-    ;
+
 }
+
+poc will be submit today
