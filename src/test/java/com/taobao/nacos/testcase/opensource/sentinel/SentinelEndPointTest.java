@@ -21,10 +21,6 @@ public class SentinelEndPointTest {
         Assert.assertTrue(true);
     }
 }
-{
-    a=45;
-    b=200;
-    b=a+d
-    d=c+b
-    ;
-}
+
+
+poc will be submit today
